@@ -11,13 +11,15 @@
       <div id="main-nav-items" class="collapse navbar-toggleable-xs">
         <a class="site-title navbar-brand" href="{{ full_base_url }}/">{{ site.title | escape }}</a>
         <ul class="nav navbar-nav">
-          {% for my_page in site.pages %}
-            {% if my_page.title %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a>
-            </li>
-            {% endif %}
-          {% endfor %}
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
         </ul>
       </div>
     </div>
