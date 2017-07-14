@@ -5,27 +5,10 @@
 @import 'custom'; // variables for bootstrap
 @import 'bootstrap';
 
-$z-index-navbar: 10;
 $footer-height: 60px;
 
 body {
   margin-bottom: $footer-height;
-}
-
-.site-header {
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: $z-index-navbar;
-}
-
-body > .site-header + .container {
-  padding: 60px 15px 0;
-}
-
-.container {
-  max-width: 720px;
 }
 
 .site-footer {
