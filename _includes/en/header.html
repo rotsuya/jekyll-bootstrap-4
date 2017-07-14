@@ -1,6 +1,5 @@
 <header class="site-header" role="banner">
 
-  {% include variables.html %}
   {% assign custom_url = site.url | append: site.baseurl %}
   {% assign full_base_url = custom_url %}
 
@@ -10,26 +9,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="main-nav-items" class="collapse navbar-collapse">
-        <a class="site-title navbar-brand" href="{{ lang_path }}/">{{ site.title[page.lang] | escape }}</a>
+        <a class="site-title navbar-brand" href="./">{{ site.title[page.lang] | escape }}</a>
         <ul class="nav navbar-nav mr-auto">
 
           {% if page.title == 'Home' %}
           <li class="nav-item active">
-            <a class="nav-link" href="{{ lang_path }}/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ lang_path }}/">Home</a>
+            <a class="nav-link" href="./">Home</a>
           </li>
           {% endif %}
 
           {% if page.title == 'Developer' %}
           <li class="nav-item active">
-            <a class="nav-link" href="{{ lang_path }}/developer/">Developer <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="developer.html">Developer <span class="sr-only">(current)</span></a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ lang_path }}/developer/">Developer</a>
+            <a class="nav-link" href="developer.html">Developer</a>
           </li>
           {% endif %}
 

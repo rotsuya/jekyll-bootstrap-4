@@ -3,5 +3,5 @@
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
   <span class="dropdown-item disabled">日本語 ✔</span>
-  <a class="dropdown-item" href="/en{{ page.url }}">English</a>
+  <a class="dropdown-item" href="{{ site.rootdir[page.lang] }}{{ site.homedir['en'] }}{{ page.path | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">English</a>
 </div>

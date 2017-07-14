@@ -1,7 +1,7 @@
-<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   English
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-  <a class="dropdown-item" href="{{ page.url || replace_first: 'en/', '' }}">日本語</a>
+  <a class="dropdown-item" href="{{ site.rootdir[page.lang] }}{{ site.homedir['ja'] }}{{ page.path | remove_first: 'en/' | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">日本語</a>
   <span class="dropdown-item disabled">English ✔</span>
 </div>
