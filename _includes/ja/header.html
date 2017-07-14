@@ -1,0 +1,45 @@
+<header class="site-header" role="banner">
+
+  {% include variables.html %}
+  {% assign custom_url = site.url | append: site.baseurl %}
+  {% assign full_base_url = custom_url %}
+
+  <nav class="navbar navbar-light navbar-toggleable-md bg-faded">
+    <div class="container">
+      <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="main-nav-items" class="collapse navbar-collapse">
+        <a class="site-title navbar-brand" href="{{ lang_path }}/">{{ site.title[page.lang] | escape }}</a>
+        <ul class="nav navbar-nav mr-auto">
+
+          {% if page.title == 'ホーム' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ lang_path }}/">ホーム <span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ lang_path }}/">ホーム</a>
+          </li>
+          {% endif %}
+
+          {% if page.title == 'Developer' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ lang_path }}/developer/">Developer <span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ lang_path }}/developer/">Developer</a>
+          </li>
+          {% endif %}
+        </ul>
+        <ul class="nav navbar-nav mr-0">
+          <li class="nav-item dropdown">
+            {% include lang.html %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
